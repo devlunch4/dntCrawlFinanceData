@@ -6,7 +6,7 @@
 
 ref: https://scribblinganything.tistory.com/383
 
-## *USING nave stock API
+## *USING naver stock API
 
 ref: https://joycecoder.tistory.com/107
 
