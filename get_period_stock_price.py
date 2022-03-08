@@ -13,7 +13,8 @@ def get_period_stock_price(start_date, end_date, stock_code):
 
 
 # 삼성전자=005930
-# 네이버=03420
+# 네이버=035420
+# 카카오=035720
 data = get_period_stock_price('20220101', '20220301', '005930')
 
 print(data)
