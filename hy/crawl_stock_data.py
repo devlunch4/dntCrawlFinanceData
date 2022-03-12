@@ -31,8 +31,8 @@ class StockCrawl:
             self.__to_json(df, ticker, ticker_name, self.save_path)
         elif self.save_type == 'csv':
             self.__to_csv(df, ticker, ticker_name, self.save_path)
-        elif self.save_type == 'tsv':
-            self.__to_tsv(df, ticker, ticker_name, self.save_path)
+        # elif self.save_type == 'tsv':
+        #     self.__to_tsv(df, ticker, ticker_name, self.save_path)
 
     def __to_json(self, df, ticker, ticker_name,save_path):
         if self.save_type == 'json':
@@ -55,11 +55,11 @@ class StockCrawl:
             df.rename(columns = {'날짜':'date'}, inplace=True)
             df.to_csv(f'{save_path}/{ticker_name}_{ticker}_h.csv', index=False)
 
-    def __to_tsv(self, df, ticker, ticker_name, save_path):
-        if self.save_type == 'csv':
-            df = df.rename_axis('날짜').reset_index()
-            df.rename(columns = {'날짜':'date'}, inplace=True)
-            df.to_csv(f'{save_path}/{ticker_name}_{ticker}_h.tsv', index=False, sep='\t')
+    # def __to_tsv(self, df, ticker, ticker_name, save_path):
+    #     if self.save_type == 'csv':
+    #         df = df.rename_axis('날짜').reset_index()
+    #         df.rename(columns = {'날짜':'date'}, inplace=True)
+    #         df.to_csv(f'{save_path}/{ticker_name}_{ticker}_h.tsv', index=False, sep='\t')
 
 if __name__ == '__main__':
     stock_eng_name = ['samsung', 'naver']
