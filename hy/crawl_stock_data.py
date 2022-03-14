@@ -1,5 +1,7 @@
 from pykrx import stock
 import json
+import pandas as pd
+
 
 class StockCrawl:
     def __init__(self, start_date, end_date, save_type, save_path):
